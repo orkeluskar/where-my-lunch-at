@@ -1,1 +1,2 @@
-# where-my-lunch-at
+# Simple lunch finder
+
