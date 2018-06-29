@@ -3,17 +3,17 @@
 ## Motivation for the idea
 
 - Ever wondered where to eat?
-- Ever had to just search for **places to eat**?
+- Ever had to search for **places to eat**?
 - Ever wanted to try some **new place** to eat?
 
-This service is a one-stop to answer all of these questions.
+This service is a one-stop answer all of these questions.
 
 Find places near you, add places you ate at, try new places to eat.
 
 
 ## Introduction
 
-> This server makes use of following to solve the lunch finding problem
+> This server makes use of the following to solve the lunch finding problem:
 
 1. Yelp's [Fusion API](https://www.yelp.com/developers/documentation/v3)
 2. [Node client](https://github.com/tonybadguy/yelp-fusion) for Yelp's fusion APIs
@@ -46,11 +46,11 @@ Find places near you, add places you ate at, try new places to eat.
 | Name | Path | Description |
 |- | - | - |
 | List Routes | / | List of all routes |
-| Find Places | [/lunch](#/lunch) | Search for places by keyword, location, rating etc |
-| Reviews | [/reviews/:id](#/reviews/:id) | Upto 3 reviews for a business |
-| Business Details | [/details/:id](#/details/:id) | Full details provided by Yelp for the business |
-| History | /ateat | Store history of places you ate |
-| Try New | /trynew | Try new places to eat by hiding places from history |
+| Find Places | [/lunch](#lunch) | Search for places by keyword, location, rating etc |
+| Reviews | [/reviews/:id](#reviewsid) | Upto 3 reviews for a business |
+| Business Details | [/details/:id](#detailsid) | Full details provided by Yelp for the business |
+| History | [/ateat](#ateat) | Store history of places you ate |
+| Try New | [/trynew](#trynew) | Try new places to eat by hiding places from history |
 
 
 ## Request Params
@@ -132,7 +132,7 @@ Response:
 ```
 
 
-
+---
 ### /reviews/:id
 
 **Request**
@@ -190,8 +190,7 @@ Response:
 ]
 ```
 
-
-
+---
 ### /details/:id
 
 Straightforward as [reviews](#/reviews/:id).
@@ -234,8 +233,7 @@ Response:
 }
 ```
 
-
-
+---
 ### /trynew
 
 Try something new! This one excludes the places the user has already ate at.
@@ -317,5 +315,3 @@ Response:
     .
 ]
 ```
-
-
